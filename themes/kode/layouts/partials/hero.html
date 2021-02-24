@@ -1,0 +1,20 @@
+<div class="hero container-fluid pt-4 pb-4 bg-dark">
+  <div class="hero-background">
+    <img src="/img/hero.jpg" class="blur"/>
+  </div>
+  <div class="container text-white">
+    {{ $title := print .Title " | " .Site.Title }}
+    {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }} 
+    {{ if isset .Params "description" }}
+      <h1 class="display-4">{{ $title }}</h1>
+      <hr />
+      <p>{{ .Description }}</p>
+      {{ if eq .Params.heroButton true }}
+      <a class="btn btn-primary" href="{{ .Params.heroRedirect }}">{{ .Params.heroRedirectTitle }}</a>
+      {{ end }}
+    {{ else }}
+    {{ if isset .Params "curso" }}{{ $title = print .Title " " .Params.curso " | " .Site.Title }}{{ end }}
+      <h1 class="display-4 text-center">{{ $title }}</h1>
+    {{ end }}
+  </div>
+</div>

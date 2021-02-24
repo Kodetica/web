@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+
+  <body>
+    {{ partial "header.html" . }}
+    <!-- Deshabilitar hero en página de 404,
+          404 tiene hero personalizado -->
+    {{ if not ( eq .Title "404 Page not found" )}}
+      {{ partial "hero.html" . }}
+    {{ end }}
+    <div>
+      <main id="main">{{ block "main" . }} {{ end }}</main>
+    </div>
+    {{ partial "footer.html" . }} {{ partial "script.html" . }}
+  </body>
+</html>

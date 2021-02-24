@@ -1,0 +1,18 @@
+{{ if (eq .Title "Blog") }}
+  {{ with .Params.tags }}
+    <p><i data-feather="tag"></i> Tags</p>
+    {{ range . }} {{ $href := print (absURL "tags/") (urlize .) }}
+      <a class="btn btn-sm btn-outline-dark" href="{{ $href }}">{{ . }}</a>
+    {{ end }}
+  {{ end }}
+  <hr/>
+{{ else if (eq .Title "Cursos") }}
+  {{ with .Params.categories }}
+    <p><i data-feather="archive"></i> Categories</p>
+    {{ range . }}
+      {{ $href := print (absURL "categories/") (urlize .) }}
+      <a class="btn btn-sm btn-outline-dark" href="{{ $href }}">{{ . }}</a>
+    {{ end }}
+  {{ end }}
+  <hr/>
+{{ end }}

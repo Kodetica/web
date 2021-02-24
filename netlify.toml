@@ -1,0 +1,8 @@
+[build]
+publish = "public"
+command = "make prod-build"
+
+[build.production.environment]
+HUGO_VERSION = "0.80.0"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
