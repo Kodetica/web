@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-    <img src="./static/logo.png" alt="Logo de Kodetica" />
+    <img src="./static/logo.png" width=250 height=250 alt="Logo de Kodetica" />
     <h1>Kodetica</h1>
 </div>
 
