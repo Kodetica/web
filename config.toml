@@ -45,26 +45,29 @@ theme = "kode"
     [markup.goldmark.parser]
       autoHeadingID = true
       autoHeadingIDType = "github"
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
     [markup.goldmark.renderer]
       hardWraps = false
-      unsafe = false
+      unsafe = true
       xhtml = false
   [markup.highlight]
     anchorLineNos = false
     codeFences = true
-    guessSyntax = false
+    guessSyntax = true
     hl_Lines = ""
     lineAnchors = ""
     lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
+    lineNos = true
+    lineNumbersInTable = false
     noClasses = true
-    style = "monokai"
+    style = "dracula"
     tabWidth = 4
   [markup.tableOfContents]
-    endLevel = 3
-    ordered = false
     startLevel = 2
+    endLevel = 4
+    ordered = true
 
 [permalinks]
 posts = "/blog/:year/:title/"
