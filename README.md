@@ -1,6 +1,9 @@
-<div align="center">
-   <img src="./static/logo.png" align="center" width=250 height=250 alt="Logo de Kodetica"/>
+<img src="./static/logo.png" width=250 height=250 alt="Logo de Kodetica" align="left"/>
+
+<div>
+    
    <h1 align="center">Kodetica</h1>
+    
 </div>
 
 ## :question: ¿Qué es esto?
