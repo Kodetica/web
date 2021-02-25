@@ -5,9 +5,10 @@
    <h1 align="center">Kodetica</h1>
     
 </div>
-
+<p align="center">
 Una organización hispanohablante de programadores, sin fines de lucro,
 que tiene como fin dar conocimientos sobre la programación en general.
+</p>
 
 <br><br><br><br>
 
