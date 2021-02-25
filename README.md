@@ -9,7 +9,7 @@
 Una organización hispanohablante de programadores, sin fines de lucro,
 que tiene como fin dar conocimientos sobre la programación en general.
 
-<br><br>
+<br><br><br><br>
 
 <!-- TODO: documentar funcionamiento acá para los redactores
 > y el funcionamiento interno del tema para los interesados
