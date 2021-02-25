@@ -1,7 +1,13 @@
-<div style="text-align: center;">
-    <img src="./static/logo.png" width=250 height=250 alt="Logo de Kodetica" />
-    <h1>Kodetica</h1>
+<img src="./static/logo.png" width=250 height=250 alt="Logo de Kodetica" width=200 align="left"/>
+
+<!--[![Discord][DiscordBadge]][DiscordUrl]-->
+
+<div align="center">
+    
+   <h1>Kodetica</h1>
+    
 </div>
+
 
 > TODO: documentar funcionamiento acá para los redactores
 > y el funcionamiento interno del tema para los interesados
