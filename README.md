@@ -11,7 +11,7 @@ TODO
 > y el funcionamiento interno del tema para los interesados
 > en contribuir con la página.
 
-# :spiral_notepad: Licencia
+## :spiral_notepad: Licencia
 
 La web de Kodetica, incluyendo Kode (su tema de Hugo) están
 bajo la [licencia MIT](./LICENSE).
