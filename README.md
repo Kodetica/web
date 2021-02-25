@@ -8,9 +8,9 @@
 Una organización hispanohablante de programadores, sin fines de lucro,
 que tiene como fin dar conocimientos sobre la programación en general.
 
-> **TODO:** documentar funcionamiento acá para los redactores
+<!-- TODO: documentar funcionamiento acá para los redactores
 > y el funcionamiento interno del tema para los interesados
-> en contribuir con la página.
+> en contribuir con la página. -->
 
 ## :spiral_notepad: Licencia
 
