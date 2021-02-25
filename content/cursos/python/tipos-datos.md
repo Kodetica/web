@@ -1,7 +1,7 @@
 +++
 title = "Tipos de Datos | Kodetica"
-date = 2021/02/24
-draft = true
+date = 2021-02-24
+draft = false
 
 heroButton = false
 +++

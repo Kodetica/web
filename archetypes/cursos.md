@@ -5,7 +5,7 @@ curso = ""
 author = ""
 
 previewImg = ""
-categories = []
+categorias = []
 toc = true
 
 date = {{ .Date }}

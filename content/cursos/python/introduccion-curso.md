@@ -1,6 +1,6 @@
 +++
 title = "Bienvenida al curso | Kodetica"
-date = 2021/02/24
+date = 2021-02-24
 draft = false
 heroButton = false
 +++
