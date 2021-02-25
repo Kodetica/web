@@ -6,8 +6,6 @@
     
 </div>
 
-## :question: ¿Qué es esto?
-
 Una organización hispanohablante de programadores, sin fines de lucro,
 que tiene como fin dar conocimientos sobre la programación en general.
 
