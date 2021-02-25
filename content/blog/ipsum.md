@@ -1,7 +1,7 @@
 +++
 title = "Ipsum"
 date = 2021-02-24T15:42:52-04:00
-draft = true
+draft = false
 summary = "sit amet nulla facilisi morbi"
 author = "John Doe"
 featured = true

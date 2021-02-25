@@ -1,7 +1,7 @@
 +++
 title = "Dolor Sit"
 date = 2021-02-24T15:43:13-04:00
-draft = true
+draft = false
 summary = "Lorem ipsum dolor sit"
 author = "John Doe"
 featured = true
