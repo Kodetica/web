@@ -7,10 +7,10 @@
   {{ end }}
   <hr/>
 {{ else if (eq .Title "Cursos") }}
-  {{ with .Params.categories }}
-    <p><i data-feather="archive"></i> Categories</p>
+  {{ with .Params.categorias }}
+    <p><i data-feather="archive"></i> Categorias</p>
     {{ range . }}
-      {{ $href := print (absURL "categories/") (urlize .) }}
+      {{ $href := print (absURL "categorias/") (urlize .) }}
       <a class="btn btn-sm btn-outline-dark" href="{{ $href }}">{{ . }}</a>
     {{ end }}
   {{ end }}

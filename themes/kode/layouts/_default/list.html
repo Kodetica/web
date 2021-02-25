@@ -2,55 +2,56 @@
 <div>
   <div class="container-fluid pt-3">
     <!-- Enlistar todas las categorias -->
-    {{ if eq .Page.Title "Cursos" }} {{ $categories := (slice) }} {{ range
-    .Pages }} {{ $categories = $categories | append .Params.categories }} {{ end
-    }}
-    <p>
-      <a class="text-dark text-decoration-none" href="/categories"
-        ><i data-feather="archive"></i> Categories</a
-      >
-    </p>
-    {{ range ( $categories | uniq) }} {{ $href := print (absURL "categories/" )
-    (urlize .) }}
-    <a class="btn btn-sm btn-outline-dark" href="{{ $href }}">{{ . }}</a>
-    {{ end }} {{ end }}
-    <!-- Enlistar todos los tags -->
-    {{ if eq .Page.Title "Blog"}} {{ $tags := (slice) }} {{ range .Pages }} {{
-    $tags = $tags | append .Params.tags }} {{ end }}
-    <p>
-      <a class="text-dark text-decoration-none" href="/tags"
-        ><i data-feather="tag"></i> Tags</a
-      >
-    </p>
-    {{ range ( $tags | uniq) }} {{ $href := print (absURL "tags/" ) (urlize .)
-    }}
-    <a class="btn btn-sm btn-outline-dark" href="{{ $href }}">{{ . }}</a>
-    {{ end }}
+    {{ if eq .Page.Title "Cursos" }}
+      {{ $categorias := (slice) }}
+      {{ range .Pages }}
+        {{ $categorias = $categorias | append .Params.categorias }}
+      {{ end }}
+      <p>
+        <a class="text-dark text-decoration-none" href="/categorias">
+          <i data-feather="archive"></i> Categorias</a>
+      </p>
+      {{ range ( $categorias | uniq) }}
+        {{ $href := print (absURL "categorias/" ) (urlize .) }}
+        <a class="btn btn-sm btn-outline-dark" href="{{ $href }}">{{ . }}</a>
+      {{ end }} {{ end }}
+      <!-- Enlistar todos los tags -->
+      {{ if eq .Page.Title "Blog"}}
+        {{ $tags := (slice) }}
+        {{ range .Pages }}
+        {{ $tags = $tags | append .Params.tags }}
+      {{ end }}
+      <p>
+        <a class="text-dark text-decoration-none" href="/tags">
+          <i data-feather="tag"></i> Tags</a>
+      </p>
+      {{ range ( $tags | uniq) }}
+        {{ $href := print (absURL "tags/" ) (urlize .) }}
+      <a class="btn btn-sm btn-outline-dark" href="{{ $href }}">{{ . }}</a>
+      {{ end }}
     <hr />
-    {{ else }} {{ partial "metadata.html" . }} {{ end }}
+    {{ else }}
+      {{ partial "metadata.html" . }}
+    {{ end }}
     <!-- Posts destacados -->
     {{ if eq .Page.Title "Blog"}}
-    <h3 class="display-4 text-center">Posts destacados</h3>
-    <div class="row row-cols-md-3 row-cols-sm-3 row-cols-1 g-3">
-      {{ range first 3 (where (where .Site.Pages.ByPublishDate "Type" "blog")
-      ".Params.featured" "=" true ) }}
-      <a class="text-decoration-none" href="{{ .RelPermalink }}">
-        <div class="col">
-          <div class="card text-white bg-dark mb-3 mt-2">
-            <img src="{{ .Params.previewImg }}" class="card-img-top" alt="" />
-            <div class="card-body">
-              {{ $dateTime := .PublishDate.Format "2006-01-02" }} {{ $dateFormat
-              := .Site.Params.dateFormat | default "Jan 2, 2006" }}
-              <time datetime="{{ $dateTime }}"
-                >{{ .PublishDate.Format $dateFormat }}</time
-              >
-              <h5 class="card-title text-primary pt-1">{{ .Title }}</h5>
-              <p class="text-truncate">{{ .Summary }}</p>
+      <h3 class="display-4 text-center">Posts destacados</h3>
+      <div class="row row-cols-md-3 row-cols-sm-3 row-cols-1 g-3">
+        {{ range first 3 (where (where .Site.Pages.ByPublishDate "Type" "blog") ".Params.featured" "=" true ) }}
+        <a class="text-decoration-none" href="{{ .RelPermalink }}">
+          <div class="col">
+            <div class="card text-white bg-dark mb-3 mt-2">
+              <img src="{{ .Params.previewImg }}" class="card-img-top" alt="" />
+              <div class="card-body">
+                {{ $dateTime := .PublishDate.Format "2006-01-02" }} {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+                <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+                <h5 class="card-title text-primary pt-1">{{ .Title }}</h5>
+                <p class="text-truncate">{{ .Summary }}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </a>
-      {{ end }}
+        </a>
+        {{ end }}
     </div>
     <hr />
     {{ end }}
@@ -62,19 +63,16 @@
           <div class="card text-white bg-dark mb-3 mt-3">
             <img src="{{ .Params.previewImg }}" class="card-img-top" alt="" />
             <div class="card-body">
-              {{ if not (or (eq .Data.Plural "tags") (eq .Data.Plural
-              "categories")) }} {{ $dateTime := .PublishDate.Format "2006-01-02"
-              }} {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2,
-              2006" }}
-              <time datetime="{{ $dateTime }}"
-                >{{ .PublishDate.Format $dateFormat }}</time
-              >
-              <h5 class="card-title text-primary pt-1">{{ .Title }}</h5>
-              <p class="text-truncate">{{ .Summary }}</p>
+              {{ if not (or (eq .Data.Plural "tags") (eq .Data.Plural "categorias")) }}
+                {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+                {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+                <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+                <h5 class="card-title text-primary pt-1">{{ .Title }}</h5>
+                <p class="text-truncate">{{ .Summary }}</p>
               {{ else }}
-              <h5 class="card-title text-center text-primary pt-1">
-                {{ .Title }}
-              </h5>
+                <h5 class="card-title text-center text-primary pt-1">
+                  {{ .Title }}
+                </h5>
               {{ end }}
             </div>
           </div>

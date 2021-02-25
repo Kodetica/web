@@ -30,7 +30,7 @@ theme = "kode"
 
 [taxonomies]
   tag = "tags"
-  category = "categories"
+  category = "categorias"
 
 [markup]
   [markup.goldmark]
