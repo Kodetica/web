@@ -13,7 +13,9 @@
       <a class="btn btn-primary" href="{{ .Params.heroRedirect }}">{{ .Params.heroRedirectTitle }}</a>
       {{ end }}
     {{ else }}
-    {{ if isset .Params "curso" }}{{ $title = print .Title " " .Params.curso " | " .Site.Title }}{{ end }}
+    {{ if (and (isset .Params "curso") (not (eq .Params.curso .Params.Title))) }}
+      {{ $title = print .Title " " .Params.curso " | " .Site.Title }}
+    {{ end }}
       <h1 class="display-4 text-center">{{ $title }}</h1>
     {{ end }}
   </div>

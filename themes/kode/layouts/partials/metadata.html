@@ -1,3 +1,6 @@
+<!--
+  Si la página es Blog, entonces renderizar los tags
+-->
 {{ if (eq .Title "Blog") }}
   {{ with .Params.tags }}
     <p><i data-feather="tag"></i> Tags</p>
@@ -6,6 +9,9 @@
     {{ end }}
   {{ end }}
   <hr/>
+<!--
+  Si la página es Cursos, entonces renderizar las categorías
+-->
 {{ else if (eq .Title "Cursos") }}
   {{ with .Params.categorias }}
     <p><i data-feather="archive"></i> Categorias</p>
@@ -15,4 +21,37 @@
     {{ end }}
   {{ end }}
   <hr/>
+<!-- Si la sección es [...] -->
+{{ else }}
+  <!--
+    Si la sección es cursos, entonces renderizar el autor
+    del curso, la versión actual del curso y el status
+  -->
+  {{ if (and (eq .Section "cursos") (eq .Title .Params.curso)) }}
+    {{ with .Params }}
+    <div class="container">
+      <div class="row row-cols-xl-4 row-cols-2 g-3">
+        <div class="col-md-6">
+          <p><i data-feather="user"></i>Autor:
+            <a class="text-dark text-decoration-none"
+               href="https://github.com/{{.autor}}">
+               {{ .autor }}</a>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p><i data-feather="pen-tool"></i> Última modificación:
+            <a class="text-dark text-decoration-none" href="https://github.com/kodetica/web/commit/{{.GitInfo.Hash}}">
+              {{ .lastMod.Format "02-01-2006" }}</a></p>
+        </div>
+        <div class="col-md-6">
+          <p><i data-feather="package"></i> Version: {{ .version }}</p>
+        </div>
+        <div class="col-md-6">
+          <p><i data-feather="box"></i> Status: {{ .status }}</p>
+        </div> 
+      </div>
+    </div>
+    {{ end }}
+    <hr />
+  {{ end }}
 {{ end }}

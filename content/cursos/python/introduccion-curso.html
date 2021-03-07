@@ -1,0 +1,204 @@
++++
+title = "Bienvenida al curso"
+summary = "Introducción a Python"
+id = 1
+curso = "Python"
+author = "Laauuu"
+
+previewImg = ""
+toc = true
+
+date = 2021-02-26
+draft = false
++++
+
+<h2 id="que-demonios-es-python">¿Qué demonios es Python?</h2>
+
+<p>
+  <strong>Python</strong>
+  es un lenguaje de programación interpretado y dinámico, que debido a su
+  sintaxis provee un código legible. Nos permite utilizar programación
+  funcional, imperativa y orientada a objetos.
+</p>
+<p>
+  Es uno de los lenguajes de programación con mejor y más rápida curva de
+  aprendizaje, por lo que es muy recomendado como primer lenguaje para aprender.
+  Además, posee una enorme comunidad y una extensa librería de paquetes con
+  funcionalidades increíbles.
+</p>
+
+<h2 id="instalacion">Instalación</h2>
+
+Por lo general, tu sistema operativo no traerá Python instalado de manera
+nativa, por lo que deberemos instalarlo de manera manual.
+
+<div class="accordion pb-3" id="pasosInstalacion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="instalacionWindows">
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#pasosWindows"
+        aria-expanded="false"
+        aria-controls="pasosWindows"
+      >
+        Instalación en Windows
+      </button>
+    </h2>
+    <div
+      id="pasosWindows"
+      class="accordion-collapse collapse"
+      aria-labelledby="instalacionWindows"
+      data-bs-parent="#pasosInstalacion"
+    >
+      <div class="accordion-body">
+        <strong>Nos dirigiremos a</strong>
+        <a
+          class="text-decoration-none"
+          href="https://www.python.org/downloads/windows/"
+          >este enlace</a
+        >
+        y seleccionaremos
+        <strong>Latest Python 3 Release</strong>.
+        <br />
+        Una vez descargado, ejecutaremos el instalador y seguiremos los pasos
+        que el mismo nos brinda.
+        <br /><br />
+        <p class="alert alert-info">
+          Es muy importante activar la opción "Add Python 3.x to PATH" o "Add
+          Python to your environment variables" para evitar problemas futuros.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="instalacionLinux">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#pasosLinux"
+        aria-expanded="false"
+        aria-controls="pasosLinux"
+      >
+        Instalación en GNU/Linux
+      </button>
+    </h2>
+    <div
+      id="pasosLinux"
+      class="accordion-collapse collapse"
+      aria-labelledby="instalacionLinux"
+      data-bs-parent="#pasosInstalacion"
+    >
+      <div class="accordion-body">
+        <div id="instalacionDistrosLinux">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="instalacionDebian">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#pasosDebian"
+                aria-expanded="false"
+                aria-controls="pasosDebian"
+              >
+                Distribuciones basadas en Debian
+              </button>
+            </h3>
+            <div
+              id="pasosDebian"
+              class="accordion-collapse collapse"
+              aria-labelledby="instalacionDebian"
+              data-bs-parent="#instalacionDebian"
+            >
+              <div class="accordion-body">
+                <kbd>sudo apt-get install python3</kbd>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="instalacionRpm">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#pasosRpm"
+                aria-expanded="false"
+                aria-controls="pasosRpm"
+              >
+                Fedora, RHEL, CentOS, openSUSE
+              </button>
+            </h3>
+            <div
+              id="pasosRpm"
+              class="accordion-collapse collapse"
+              aria-labelledby="instalacionRpm"
+              data-bs-parent="#instalacionRpm"
+            >
+              <div class="accordion-body">
+                <kbd>sudo dnf install python3</kbd>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="instalacionArch">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#pasosArch"
+                aria-expanded="false"
+                aria-controls="pasosArch"
+              >
+                Distribuciones basadas en Arch
+              </button>
+            </h3>
+            <div
+              id="pasosArch"
+              class="accordion-collapse collapse"
+              aria-labelledby="instalacionArch"
+              data-bs-parent="#instalacionArch"
+            >
+              <div class="accordion-body">
+                <kbd>sudo pacman -S python</kbd>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<h2 class="nuestro-ambiente-de-desarrollo">Nuestro ambiente de desarrollo</h2>
+
+<p>
+  ¿Podríamos programar en un bloc de notas? La respuesta es sí, aunque hoy en
+  día hay muchas herramientas que facilitarán la escritura del código, a estas
+  se le conocen como IDE (Ambiente de Desarrollo Integrado).
+</p>
+<p>
+  No vamos a entrar mucho en detalle, pero los IDEs nos brindan algo llamado
+  <strong>highlight</strong>, que es básicamente un resaltado a palabras claves
+  (facilita muchísimo la escritura/lectura de nuestro código). Además de atajos
+  de <strong>teclado, extensiones y más</strong>. Puedes elegir entre diferentes
+  IDEs, como <strong>Atom, Visual Studio Code</strong> e incluso
+  <strong>NeoVim</strong>.
+</p>
+<p>Para este curso utilizaremos <strong>Visual Studio Code</strong>.</p>
+
+<h2 id="eso-es-todo-por-ahora">Eso es todo por ahora...</h2>
+
+<p>
+  ¡Continúa a la siguiente clase para comenzar a escribir tu primer programa en
+  Python!
+</p>
+<p class="alert alert-info">
+  ¿Tienes una duda? ¡Únete a
+  <a class="text-dark text-decoration-none" href="https://discord.gg/Q3vcJcwDR5"
+    >nuestra comunidad de Discord</a
+  >, estaremos encantados de ayudarte!
+</p>
+
+{{< next-prev >}}

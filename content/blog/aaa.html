@@ -1,10 +1,16 @@
 +++
 # String
 #     Título de la página
-title = "{{ replace .Name "-" " " | title }}"
+title = "Aaa"
 # String
 #     Breve descripción de la página
 summary = ""
+# Integer
+#     ID del post, utilizado para el orden.
+#     Ver cuántos posts hay actualmente para evitar
+#     crear conflictos, por ejemplo, si hay 3 posts
+#     entonces el siguiente debe tener la ID 4.
+id = 1
 # String
 #     Autor de la página
 author = ""
@@ -32,7 +38,7 @@ featured = false
 #       (hugo new blog/nombre-de-tu-post.md)
 #     debe ser establecida manualmente usando el formato
 #     yyyy-mm-dd, por ejemplo 2021-02-25
-date = {{ .Date }}
+date = 2021-02-26T23:12:06-04:00
 # Boolean
 #     Si el post es un borrador o no,
 #     dejarse en true si aún no está concluido para que de esa forma

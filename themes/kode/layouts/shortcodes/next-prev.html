@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-6 text-start">
+    {{ if .Page.NextPage }}
+      <a class="text-dark" href="{{ .Page.NextPage.Permalink }}"
+        >« {{ .Page.NextPage.Title | truncate 50 "..." }}</a
+      >
+    {{ end }}
+  </div>
+
+  <div class="col-6 text-end">
+    {{ if .Page.PrevPage }}
+      <a class="text-dark" href="{{ .Page.PrevPage.Permalink }}"
+        >{{ .Page.PrevPage.Title | truncate 50 "..."}} »</a
+      >
+    {{ end }}
+  </div>
+</div>

@@ -1,0 +1,127 @@
++++
+title = "Mi primer programa"
+summary = "Primer programa en Python"
+id = 2
+curso = "Python"
+author = "Laauuu"
+
+previewImg = ""
+toc = true
+
+date = 2021-02-26
+draft = false
++++
+
+<p>
+  Si ya has programado antes, sabrás que por convención, el primer acercamiento
+  a un nuevo lenguaje es el típico programa que imprime en nuestra terminal
+  <code>Hola Mundo!</code>.
+  <br />
+  Para hacer esto tenemos dos opciones:
+</p>
+
+<h2 id="hola-mundo-en-nuestro-ide">
+  Hola Mundo en nuestro IDE
+</h2>
+<p>
+  Vamos a crear un nuevo directorio en el escritorio llamado
+  <code>curso-python</code>, y dentro un archivo llamado
+  <code>hola-mundo.py</code>.
+</p>
+<p class="alert alert-info">
+  <code>.py</code> es la extensión de los archivos <strong>Python</strong>.
+</p>
+
+<p>
+  Abriremos nuestra <strong>terminal</strong> (esa ventanita negra, quizás la
+  conocen como <code>cmd</code>) y nos moveremos hacia el directorio con
+  <code>cd</code>
+</p>
+
+{{< highlight bash "linenos=false" >}}
+cd Escritorio/curso-python
+{{< /highlight >}}
+
+<p>
+  Ahora procederemos a abrir nuestro IDE, iremos a <code>File</code> (Arriba a
+  la izquierda). Haremos click en <code>Open Folder</code>, que abrirá el
+  navegador de carpetas, en donde deberemos buscar el directorio que creamos
+  anteriormente.
+</p>
+
+<p>
+  También podríamos escribir el siguiente comando en nuestra consola (ya
+  ubicados en el directorio <code>curso-python</code>):
+</p>
+
+{{< highlight bash "linenos=false" >}}
+code .
+{{< / highlight >}}
+
+<p>
+  Una vez dentro de nuestro IDE, abriremos el archivo que creamos anteriormente
+  (esto lo podrán ver a la izquierda de sus pantallas) y escribiremos
+</p>
+
+{{< highlight python3 "linenos=false" >}}
+print("Hola mundo")
+{{< / highlight >}}
+
+<p>Ahora, volvemos a nuestra terminal, y lo ejecutamos con</p>
+
+<p class="alert alert-warning">
+  Si eres usuario de Windows, deberás reemplazar <kbd>python3</kbd> por
+  <kbd>py</kbd>
+</p>
+
+{{< highlight bash "linenos=false" >}}
+python3 hola-mundo.py
+{{< / highlight >}}
+
+<p>
+  Si todo ha salido bien verás <code>Hola mundo</code> en tu terminal. ¡Genial!
+</p>
+
+<h3 id="hola-mundo-en-terminal-interactiva">
+  Hola Mundo en terminal interactiva
+</h3>
+<p>
+  La terminal interactiva nos brinda una manera rápida y eficaz de correr
+  pequeñas partes de código sin tener que crear y ejecutar un archivo. Deberás
+  familiarizarte con ella, porque es muy útil a la hora de programar.
+</p>
+
+<p>
+  Abriremos una <strong>terminal</strong> y escribiremos
+  <kbd>python3</kbd> (<kbd>py</kbd> si utilizas Windows) para iniciar la
+  terminal interactiva de Python. Ahora, solo escribiremos
+</p>
+
+{{< highlight python3 "linenos=false" >}}
+print("Hola mundo")
+{{< / highlight >}}
+<p>
+  y daremos
+  <kbd>enter</kbd>
+</p>
+<p>
+  Si todo ha salido bien verás
+  <code>Hola mundo</code>
+  en tu terminal. Ha sido más rápido que la manera anterior, ¿verdad?
+</p>
+<h2 id="eso-es-todo-por-ahora">Eso es todo por ahora...</h2>
+<p>
+  Ya aprendiste a crear <strong>archivos Python</strong>,
+  <strong>algunos comandos básicos de Terminal</strong> y
+  <strong>escribir tu primer programa en Python de dos formas diferentes</strong
+  >. Continúa a la próxima clase, en donde aprenderás sobre
+  <strong>Tipos de datos</strong>. ¡Nos vemos!
+</p>
+<p class="alert alert-info">
+  ¿Tienes una duda? ¡Únete a
+  <a class="text-dark text-decoration-none" href="https://discord.gg/Q3vcJcwDR5"
+    >nuestra comunidad de Discord</a
+  >, estaremos encantados de ayudarte!
+</p>
+
+{{< next-prev >}}

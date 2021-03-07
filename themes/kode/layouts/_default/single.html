@@ -1,10 +1,15 @@
 {{ define "main" }}
 
-<div class="container-fluid pt-3">
+<div class="container pt-3 pb-3">
   {{ if not (eq .Page.Title "Contacto") }}
     {{ partial "metadata.html" . }}
   {{ end }}
-  {{ .Content }}
-  {{ partial "toc.html" . }}
+    <!-- Contenido -->
+    {{ .Content }}
+    <!-- Tabla de contenidos -->
+    <div class="sticky-top">
+      <nav class="toc"></nav>
+    </div>
+  </div>
 </div>
 {{ end }}

@@ -57,29 +57,31 @@
     {{ end }}
     <!-- Todos los posts -->
     <div class="row row-cols-md-3 row-cols-sm-3 row-cols-1 g-3">
-      {{ range .Pages.ByPublishDate }}
-      <a class="text-decoration-none" href="{{ .RelPermalink }}">
-        <div class="col">
-          <div class="card text-white bg-dark mb-3 mt-3">
-            <img src="{{ .Params.previewImg }}" class="card-img-top" alt="" />
-            <div class="card-body">
-              {{ if not (or (eq .Data.Plural "tags") (eq .Data.Plural "categorias")) }}
-                {{ $dateTime := .PublishDate.Format "2006-01-02" }}
-                {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
-                <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
-                <h5 class="card-title text-primary pt-1">{{ .Title }}</h5>
-                <p class="text-truncate">{{ .Summary }}</p>
-              {{ else }}
-                <h5 class="card-title text-center text-primary pt-1">
-                  {{ .Title }}
-                </h5>
-              {{ end }}
+      {{ range .Pages.ByParam "id" }}
+        <a class="text-decoration-none" href="{{ .RelPermalink }}">
+          <div class="col">
+            <div class="card text-white bg-dark mb-3 mt-3">
+              <img src="{{ .Params.previewImg }}" class="card-img-top" alt="" />
+              <div class="card-body">
+                {{ if not (or (eq .Data.Plural "tags") (eq .Data.Plural "categorias")) }}
+                  {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+                  {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+                  <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+                  <h5 class="card-title text-primary pt-1">{{ .Title }}</h5>
+                  <p class="text-truncate">{{ .Summary }}</p>
+                {{ else }}
+                  <h5 class="card-title text-center text-primary pt-1">
+                    {{ .Title }}
+                  </h5>
+                {{ end }}
+              </div>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
       {{ end }}
     </div>
+    <!-- Paginación -->
+    {{ template "_internal/pagination.html" . }}
   </div>
 </div>
 {{ end }}

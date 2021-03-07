@@ -1,20 +1,25 @@
 +++
 # String
-#     Título de la página del curso,
-#     ejemplo: Introducción
-title = "{{ replace .Name "-" " " | title }}"
+#     Título de la página
+title = "Sda"
 # String
-#     Breve descripción de la página del curso
+#     Breve descripción de la página
 summary = ""
+# Integer
+#     ID del post, utilizado para el orden.
+#     Ver cuántos posts hay actualmente para evitar
+#     crear conflictos, por ejemplo, si hay 3 posts
+#     entonces el siguiente debe tener la ID 4.
+id = 1
 # String
-#     Nombre del curso
-curso = ""
-# String
-#     Autor del curso
+#     Autor de la página
 author = ""
 
+# Array
+#     Etiquetas de la página
+tags = []
 # String
-#     Imagen de preview en /cursos/
+#     Imagen de preview en /blog/
 #     puede ser una imagen local en la web
 #     o una url que termine en formato de imagen.
 # 
@@ -22,23 +27,18 @@ author = ""
 #     dentro de la carpeta /static/ y llamarse con ruta
 #     absoluta, ejemplo: /python.png
 previewImg = ""
-# Array
-#     Categorías del curso, debe tener contenido
-#     solamente en el index del curso.
-categorias = []
 # Boolean
-#     Si la página debe contener una tabla de contenidos o no,
-#     necesita mínimo 400 palabras para funcionar, puede ser
-#     reducido en un futuro.
-toc = true
+#     Si el post debe ser destacado o no,
+#     dejarse en false si no tiene mucha actividad
+featured = false
 
 # Date
 #     La fecha de publicación de la página,
 #     de no ser generada usando el comando de hugo
-#       (hugo new cursos/nombre-del-curso/nombre-de-tu-archivo.md)
+#       (hugo new blog/nombre-de-tu-post.md)
 #     debe ser establecida manualmente usando el formato
 #     yyyy-mm-dd, por ejemplo 2021-02-25
-date = {{ .Date }}
+date = 2021-02-26T23:11:34-04:00
 # Boolean
 #     Si el post es un borrador o no,
 #     dejarse en true si aún no está concluido para que de esa forma
